@@ -1,11 +1,15 @@
 import { DUMMY_NEWS } from "@/dummy-news"
+import { notFound } from "next/navigation";
 
 
 export default async function({params}){
     const slug = await params
     const newsSlug = slug.new
-    const newsItem = DUMMY_NEWS.find((prev) => prev.slug === newsSlug)
+    const newsItem = DUMMY_NEWS.find((prev) => prev.slug === newsSlug) ;
 
+    if(!newsItem){
+        notFound();
+    }
     return(
         <>
             <article className="news-article">
