@@ -17,7 +17,6 @@ export default function News(){
                                 <img src={`/images/news/${news.image}`} alt={news.title}/>
                                 <span>{news.title}</span>
                             </Link>
-                            
                         </li>
                     ))
                 }
