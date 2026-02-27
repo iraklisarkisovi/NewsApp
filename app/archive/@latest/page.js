@@ -1,5 +1,7 @@
 
 
 export default function LatestNewsPage() {
-    return (<p>Latest News</p>)
+    return (
+        <p>Latest News</p>
+    )
 }
